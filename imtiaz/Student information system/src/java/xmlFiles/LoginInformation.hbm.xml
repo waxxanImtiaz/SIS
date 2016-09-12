@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class catalog="system" name="beans.LoginInformation" optimistic-lock="version" table="LoginInformation">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="username" type="string">
+      <column length="30" name="username"/>
+    </property>
+   <property name="password" type="string">
+      <column length="30" name="password"/>
+    </property>
+   <property name="accept" type="string">
+      <column length="30" name="accept"/>
+    </property>
+   <property name="acceptLanguage" type="string">
+      <column length="30" name="acceptLanguage"/>
+    </property>
+     <property name="userAgent" type="string">
+      <column length="30" name="userAgent"/>
+    </property>
+    <property name="host" type="string">
+      <column length="30" name="host"/>
+    </property>
+      <property name="acceptEncoding" type="string">
+      <column length="30" name="acceptEncoding"/>
+    </property>
+      <property name="connection" type="string">
+      <column length="30" name="connection"/>
+    </property>
+      <property name="cacheControl" type="string">
+      <column length="30" name="cacheControl"/>
+    </property>
+      <property name="cookie" type="string">
+      <column length="30" name="cookie"/>
+    </property>
+  </class>
+</hibernate-mapping>
+

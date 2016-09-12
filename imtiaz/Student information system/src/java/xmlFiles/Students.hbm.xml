@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class catalog="system" name="beans.Students" optimistic-lock="version" table="STUDENTS">
+    <id name="rollNum" type="string">
+      <column name="rollNum"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="name" type="string">
+      <column length="30" name="name"/>
+    </property>
+    <property name="gender" type="string">
+      <column length="10" name="gender"/>
+    </property>
+    <property name="fatherName" type="string">
+      <column length="30" name="fatherName"/>
+    </property>
+    <property name="caste" type="string">
+      <column length="15" name="caste"/>
+    </property>
+    <property name="department" type="string">
+      <column length="15" name="department"/>
+    </property>
+    <property name="cnic" type="string">
+      <column length="15" name="cnic"/>
+    </property>
+    <property name="stContactNum" type="string">
+      <column length="38" name="stPhoneNum"/>
+    </property>
+    <property name="ftContactNum" type="string">
+      <column length="38" name="ftPhoneNum"/>
+    </property>
+    <property name="stEmail" type="string">
+      <column length="40" name="stEmail"/>
+    </property>
+    <property name="password" type="string">
+      <column length="30" name="password"/>
+    </property>
+    <property name="tempAdd" type="string">
+      <column length="60" name="tempAdd"/>
+    </property>
+    <property name="batch" type="string">
+      <column length="60" name="batch"/>
+    </property>
+    <property name="permAdd" type="string">
+      <column length="60" name="permAdd"/>
+    </property>
+   
+  </class>
+</hibernate-mapping>
