@@ -1,16 +1,8 @@
-<%-- 
-    Document   : index
-    Created on : Jun 15, 2016, 12:41:04 AM
-    Author     : waxxan
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page errorPage="error.jsp"%>
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
-
+	
 <link rel="stylesheet" type="text/css" media="all" href="../wp-content/themes/duet/style.css" />
 
 	  
@@ -52,11 +44,6 @@
     beans.Students personalInfo = (beans.Students)session.getAttribute("personalInfo");
     session.setAttribute("persoanlInfo", personalInfo);
 %>
-<%
-    response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");//HTTP 1.1
-    response.setHeader("Pragma","no-cache"); //HTTP 1.0
-    response.setDateHeader ("Expires", 0); //prevents caching at the proxy server
-%>
 <div id="wrapper" class="hfeed">
 	<div class="inner_wrap">
     <div id="header">
@@ -66,31 +53,33 @@
     	<div class="inner_header">
          
                 <div class="logo">
-                <a href="index.jsp" title="MIS DUET">
-                         <img src="../wp-content/themes/duet/images/logo1.jpg" height=277 width=244>
+                <a href="../index.jsp" title="MIS DUET">
+                         <img src="../wp-content/themes/duet/images/logo1.jpg" height=277  width=244>
                                 </a>
                 </div>
                 <div id="nav-trigger">
                         <div>- <span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></div>
                 </div>
                 <nav id="nav-mobile">
-                    	<div>
-</div>                </nav>
+                    	<div >
+						</div>                </nav>
                 <div class="top_menu">
                 	<div class="menu-header"><ul id="menu-top-menu-1" class="menu">
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7286"><a href="#">Log Out</a></li>
 </ul></div>                
       
                 <div class="search">
-                	     
-				
+                	                    	<div class="mw_button">
+                        	
+                        </div>
+                                       
                 </div>
                 </div>
             </div>
 			<!--.inner_head-->
             
             <div class="vav_wrap">
-            <div  class="menu-toggle-button" data-menu-id="demo-menu">MENU <i>---</i>â‰¡</div>
+            <div  class="menu-toggle-button" data-menu-id="demo-menu">MENU <i>---</i>?</div>
             <div class="res_menu"><ul class="menu-list" id="demo-menu"><li id="item-id">Menu: </li>
 			
 			</div>            
@@ -104,7 +93,6 @@
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7840"><a href="personel.jsp">Personel Information</a></li>
 </ul>
 </li>
-
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-50"><a href="academics.jsp"> Academics </a>
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-975"><a href="m_attendance.jsp">Attendance</a>
@@ -125,30 +113,18 @@
 		
 	</ul>
 </li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-975"><a href="library.jsp">Lectures</a>
-	<ul class="sub-menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-980"><a href="#">1st Semister</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-981"><a href="#">2nd Semister</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-982"><a href="#">3rd Semister</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7308"><a href="#">4th Semister</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-980"><a href="#">5th Semister</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-981"><a href="#">6th Semister</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-982"><a href="#">7th Semister</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7308"><a href="#">8th Semister</a></li>
-		
-	</ul>
-</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8172"><a href="#">Lectures</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9573"><a href="#">Time table</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-37"><a href="miscellaneous.jsp"> Miscellenous </a>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-37"><a href="miscellaneous.jsp"> Miscellaneous </a>
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9783"><a href="#">News</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-515"><a href="#">Messege</a>
 	
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-37"><a href="m_result.jsp"> Result / Exams </a>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-37"><a href="m_result"> Result / Exams </a>
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9783"><a href="result.jsp">1st Semister</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-515"><a href="#">2nd Semister</a>
@@ -162,31 +138,8 @@
 </li>
 <li id="menu-item-8238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8238"><a href="#"> Transport </a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-975"><a href="#">Points Route</a>
-	<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-515"><a href="#">Point No: 1</a>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8238"><a href="#">Point No: 2</a>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-515"><a href="#">Point No: 3</a>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8238"><a href="#">Point No: 4</a>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8238"><a href="#">Point No: 5</a>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-515"><a href="#">Point No: 6</a>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8238"><a href="#">Point No: 7</a>	
-		
-	</ul>
-</li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-975"><a href="#">Points Location</a>
-	<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-515"><a href="#">Point No: 1</a>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8238"><a href="#">Point No: 2</a>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-515"><a href="#">Point No: 3</a>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8238"><a href="#">Point No: 4</a>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8238"><a href="#">Point No: 5</a>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-515"><a href="#">Point No: 6</a>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8238"><a href="#">Point No: 7</a>	
-		
-	</ul>
-</li>
-	
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8236"><a href="#">Points Route</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8235"><a href="#">Points location</a></li>
 </ul>
 </li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7300"><a href="m_attendance.jsp"> Attendance </a>
@@ -199,12 +152,13 @@
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8790"><a href="#">6th Semister</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8789"><a href="#">7th Semister</a></li>
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7306"><a href="#">8th Semister</a></li>
-</ul> 
+</ul>
 </li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7300"><a href="library.jsp"> Library </a>
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8787"><a href="library.jsp">Borrowed Books</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8791"><a href="#">Books List</a></li>
+
 </ul>
 </li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7307"><a href="#"> Course Content </a></li>
@@ -214,7 +168,7 @@
                  </div>   
         	</div>
 	</div><!-- #header -->
-	<div id="main">
+<div id="main">
            
             	
        
@@ -223,20 +177,103 @@
 
 			
 
-				<div id="post-22" class="post-22 page type-page status-publish has-post-thumbnail hentry">
-											<h1 class="entry-title">Profile</h1>
+				<div id="post-136" class="post-136 page type-page status-publish has-post-thumbnail hentry">
+											<h1 class="entry-title">Result</h1>
 					
 					<div class="entry-content">
-<div class="link_images">
-<div class="menu_item col4"><a href="personel.jsp" ><h2 class="red white" style="bottom:0">Personel Information</h2><img class="alignnone size-full wp-image-84" src="../wp-content/uploads/2014/09/personel.jpg" alt="vision-values" width="256" height="165" /></a></div><br />
-<div class="menu_item col4"><a href="academics.jsp" ><h2 class="blue white" style="bottom:0">Academics</h2><img class="alignnone size-full wp-image-88" src="../wp-content/uploads/2014/09/academics.jpg" alt="uni-leaders" width="256" height="165" /></a></div><br />
-<div class="menu_item col4"><a href="miscellaneous.jsp" ><h2 class="yellow indigo" style="bottom:0">Miscellenous</h2><img class="alignnone size-full wp-image-85" src="../wp-content/uploads/2014/09/miscellaneous.jpg" alt="offic-of-president" width="257" height="165" /></a></div><br />
-<div class="menu_item col4"><a href="m_result.jsp" ><h2 class="yellow indigo" style="bottom:0">Result</h2><img class="alignnone size-full wp-image-85" src="../wp-content/uploads/2014/09/result.jpg" alt="offic-of-president" width="257" height="165" /></a></div><br />
-<div class="menu_item col4"><a href="#" ><h2 class="blue white" style="bottom:0">Transport</h2><img class="alignnone size-full wp-image-84" src="../wp-content/uploads/2014/09/transport.jpg" alt="vision-values" width="256" height="165" /></a></div><br />
-<div class="menu_item col4"><a href="complaint.jsp" ><h2 class="red white" style="bottom:0">Complaints/Help</h2><img class="alignnone size-full wp-image-88" src="../wp-content/uploads/2014/09/duet.jpg" alt="uni-leaders" width="256" height="165" /></a></div>
-
-
+						<div class="accordion"> 
+						<div class="panel-content activeClass">
+<div>
+<table class="huTable" border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
 </div>
+<div>
+<table class="huTable" border="0" width="100%" cellspacing="0" cellpadding="10">
+<tbody>
+<align="center" width="780">
+            <tr><td colspan="5" width="197"> Ist Semister Ist Year</FONT></td>     
+ 		   <tr>
+          <td width="197" height="29">  IST SEMISTER</FONT></td>
+          <td colspan="4" width="206">  <center>MARKS</center></td>
+          </tr>
+          <tr>
+          <td width="197">  COURSE</td>
+          <td colspan="2" width="206">  <center>THEORY MARKS</center></td>
+          <td colspan="2" width="188">  <center>PRACTICAL MARKS</center></td>
+          </td>
+          </tr>
+          
+           <tr>
+          <td width="156">  </td>
+          <td width="156">TOTAL  </td>
+          <td width="156">OBTAINED</td>
+          <td width="156">TOTAL </td>
+          <td width="156">OBTAINED </td>
+         
+          </tr>
+           <tr>
+          <td>ITC</td>
+          <td> 100 </td>
+          <td> --- </td>
+          <td> 50</td>
+          <td> --- </td>
+           </tr>
+          
+          <tr>
+          <td> CPP-1</td>
+          <td>100</td>
+          <td> --- </td>
+          <td> 50 </td>
+          <td> --- </td>
+          </tr>
+          
+          <tr>
+          <td>  EPC </td>
+          <td>100 </td>
+          <td> --- </td>
+          <td> -- </td>
+          <td> --- </td>
+          </tr>
+          
+          <tr>
+          <td>PAK STUDIES</td>
+          <td>50 </td>
+          <td> --- </td>
+          <td> -- </td>
+          <td>--- </td>
+          </tr>
+          
+          <tr>
+          <td> ISLAMIAT </td>
+          <td> 50 </td>
+          <td> --- </td>
+          <td> -- </td>
+          <td> --- </td>
+          </td>
+          </tr><tr>
+          <td> CALCULAS</td>
+          <td>100 </td>
+          <td> --- </td>
+          <td> -- </td>
+          <td> --- </td>
+          </td>
+          </tr>
+          <tr>
+          <td colspan="5" height="30" >  </td>
+          </tr>
+		  <tr>
+          <td colspan="2" width="197">  GPA </td>
+          <td colspan="3" width="196">   --	 </td>
+          </tr>
+          <tr>
+          <td colspan="2" width="197">  PERCENTAGE</td>
+          <td colspan="3" width="196">   --	 </td>
+          </tr>
+          
+          </tbody>
+</table>
+</div>
+<p></p></div> </div>
 																	</div><!-- .entry-content -->
 				</div><!-- #post-## -->
 
@@ -244,6 +281,7 @@
 
 			</div><!-- #content -->
                         
+		
 		<div id="primary" class="widget-area" role="complementary">
 
                     <h3  class="widget-title side"></h3>
@@ -284,7 +322,6 @@
 	
 			
 		</div><!-- #primary .widget-area -->
-		
 		</div><!-- #container -->
 
 
@@ -299,7 +336,7 @@
         <li id="nav_menu-2" class="widget-container widget_nav_menu"><h3 class="widget-title">PERSONEL</h3><div class="menu-about-us-container"><ul id="menu-about-us" class="menu"><li id="menu-item-65" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a href="#">Personel Information</a></li>
 </ul></div></li>
 <li id="nav_menu-3" class="widget-container widget_nav_menu"><h3 class="widget-title"> </h3></a> <div class="menu-footer-house-of-habib-container"><ul id="menu-footer-house-of-habib" class="menu">
-<li id="menu-item-6363" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6363"><a href="complaint.jsp">Complaints/Help</a></li>
+<li id="menu-item-6363" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6363"><a href="#">Complaints/Help</a></li>
 
 </ul></div></li>      </div>
       <div class="footer_col">
@@ -351,7 +388,7 @@ registrar@duet.edu.pk </a></li>
       </div>
       <div class="footer_right">
         
-         Rights Reserved - Dawood unniversity Of Engineering and Technology karachi | Laghari - Wassan - Lashari - Kumar<a href="#" target="_blank" style="color:#fff !important;"></a></p>
+          © Dawood unniversity Of Engineering and Technology karachi - All Rights Reserved | Laghari - Wassan - Lashari - Kumar <a href="#" target="_blank" style="color:#fff !important;"></a></p>
       </div>
     </div>
     <!-- #site-info --> 

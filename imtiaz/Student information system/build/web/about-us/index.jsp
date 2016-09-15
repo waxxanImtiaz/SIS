@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page errorPage="error.jsp"%>
-﻿<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 
 <head>
@@ -18,43 +18,14 @@
 <title>MIS DUET</title>
 
 <script src="../wp-content/themes/duet/menu/jquery-1.10.2.min.js"></script>
-<script src="jquery-3.1.0.min.js"></script>
-<script type="text/javascript">
-    window.history.forward();
-    function noBack() { window.history.forward(); }
-</script>
-<script>
-$(document).ready(function(){
-        $("#post-22").load("maincontent.html", function(responseTxt, statusTxt, xhr){
-//            if(statusTxt == "success")
-//                alert("External content loaded successfully!");
-//            if(statusTxt == "error")
-//                alert("Error: " + xhr.status + ": " + xhr.statusText);
-    });
-    
-    $("#personalInfo").click(function(){
-        $("#post-22").load("personalInfo.jsp", function(responseTxt, statusTxt, xhr){});
-    });
-});
-</script>
+
 </head>
 
 <link rel="stylesheet" href="../wp-content/themes/duet/menu/demo.css">
 <link rel="stylesheet" href="../wp-content/themes/duet/menu/daisynav.css">
 
 
-<body class="page page-id-22 page-parent page-template-default"  onload="noBack();"
-    onpageshow="if (event.persisted) noBack();" onunload="">
-<% 
-    beans.Students personalInfo = (beans.Students)session.getAttribute("personalInfo");
-    session.setAttribute("persoanlInfo", personalInfo);
-%>
-<%
-    response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");//HTTP 1.1
-    response.setHeader("Pragma","no-cache"); //HTTP 1.0
-    response.setDateHeader ("Expires", 0); //prevents caching at the proxy server
-%>
-
+<body class="page page-id-22 page-parent page-template-default">
     	<!-- page -->
 		<script src="../wp-content/themes/duet/backstretch/jquery.backstretch.min.js"></script>
 		<script>
@@ -77,7 +48,15 @@ $(document).ready(function(){
     //    	$.backstretch("");
         </script>
 		
-	
+<% 
+    beans.Students personalInfo = (beans.Students)session.getAttribute("personalInfo");
+    session.setAttribute("persoanlInfo", personalInfo);
+%>
+<%
+    response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");//HTTP 1.1
+    response.setHeader("Pragma","no-cache"); //HTTP 1.0
+    response.setDateHeader ("Expires", 0); //prevents caching at the proxy server
+%>
 <div id="wrapper" class="hfeed">
 	<div class="inner_wrap">
     <div id="header">
@@ -88,19 +67,18 @@ $(document).ready(function(){
          
                 <div class="logo">
                 <a href="index.jsp" title="MIS DUET">
-                         <img src="../wp-content/themes/duet/images/logo1.jpg" height=314  width=244>
+                         <img src="../wp-content/themes/duet/images/logo1.jpg" height=277 width=244>
                                 </a>
                 </div>
                 <div id="nav-trigger">
                         <div>- <span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></div>
                 </div>
                 <nav id="nav-mobile">
-                    	<div class="menu-top-menu-container"><ul id="menu-top-menu" class="menu">
-<li id="menu-item-7286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7286"><a href="startProject.jsp">Log Out</a></li>
-</ul></div>                </nav>
+                    	<div>
+</div>                </nav>
                 <div class="top_menu">
                 	<div class="menu-header"><ul id="menu-top-menu-1" class="menu">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7286"><a href="startProject.jsp">Log Out</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7286"><a href="#">Log Out</a></li>
 </ul></div>                
       
                 <div class="search">
@@ -120,10 +98,10 @@ $(document).ready(function(){
                     <div id="access" role="navigation">
                         <div class="menu-header"><ul id="menu-main-menu-1" class="menu">
 						<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-22 current_page_item menu-item-has-children menu-item-36"><a href="index.jsp">Home Page </a>
-						<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-22 current_page_item menu-item-has-children menu-item-36"><a href="personelInfo.jsp">Personel </a>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-22 current_page_item menu-item-has-children menu-item-36"><a href="personel.jsp">Personel </a>
 						
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7840"><a href="personelInfo.jsp">Personel Information</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7840"><a href="personel.jsp">Personel Information</a></li>
 </ul>
 </li>
 
@@ -147,7 +125,6 @@ $(document).ready(function(){
 		
 	</ul>
 </li>
-
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-975"><a href="library.jsp">Lectures</a>
 	<ul class="sub-menu">
 		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-980"><a href="#">1st Semister</a></li>
@@ -237,9 +214,7 @@ $(document).ready(function(){
                  </div>   
         	</div>
 	</div><!-- #header -->
-        <!-- setting objects -->
-       
-        <div id="main">
+	<div id="main">
            
             	
        
@@ -249,7 +224,20 @@ $(document).ready(function(){
 			
 
 				<div id="post-22" class="post-22 page type-page status-publish has-post-thumbnail hentry">
-			
+											<h1 class="entry-title">Profile</h1>
+					
+					<div class="entry-content">
+<div class="link_images">
+<div class="menu_item col4"><a href="personel.jsp" ><h2 class="red white" style="bottom:0">Personel Information</h2><img class="alignnone size-full wp-image-84" src="../wp-content/uploads/2014/09/personel.jpg" alt="vision-values" width="256" height="165" /></a></div><br />
+<div class="menu_item col4"><a href="academics.jsp" ><h2 class="blue white" style="bottom:0">Academics</h2><img class="alignnone size-full wp-image-88" src="../wp-content/uploads/2014/09/academics.jpg" alt="uni-leaders" width="256" height="165" /></a></div><br />
+<div class="menu_item col4"><a href="miscellaneous.jsp" ><h2 class="yellow indigo" style="bottom:0">Miscellenous</h2><img class="alignnone size-full wp-image-85" src="../wp-content/uploads/2014/09/miscellaneous.jpg" alt="offic-of-president" width="257" height="165" /></a></div><br />
+<div class="menu_item col4"><a href="m_result.jsp" ><h2 class="yellow indigo" style="bottom:0">Result</h2><img class="alignnone size-full wp-image-85" src="../wp-content/uploads/2014/09/result.jpg" alt="offic-of-president" width="257" height="165" /></a></div><br />
+<div class="menu_item col4"><a href="#" ><h2 class="blue white" style="bottom:0">Transport</h2><img class="alignnone size-full wp-image-84" src="../wp-content/uploads/2014/09/transport.jpg" alt="vision-values" width="256" height="165" /></a></div><br />
+<div class="menu_item col4"><a href="complaint.jsp" ><h2 class="red white" style="bottom:0">Complaints/Help</h2><img class="alignnone size-full wp-image-88" src="../wp-content/uploads/2014/09/duet.jpg" alt="uni-leaders" width="256" height="165" /></a></div>
+
+
+</div>
+																	</div><!-- .entry-content -->
 				</div><!-- #post-## -->
 
 				
@@ -296,8 +284,7 @@ $(document).ready(function(){
 	
 			
 		</div><!-- #primary .widget-area -->
-
-
+		
 		</div><!-- #container -->
 
 

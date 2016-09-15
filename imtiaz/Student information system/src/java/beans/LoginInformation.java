@@ -5,8 +5,11 @@
  */
 package beans;
 
+import org.hibernate.annotations.GenericGenerator;
+
 
 public class LoginInformation {
+    
     private int id;
     private String username;
     private String accept;
@@ -21,6 +24,7 @@ public class LoginInformation {
     /**
      * @return the id
      */
+
     public int getId() {
         return id;
     }

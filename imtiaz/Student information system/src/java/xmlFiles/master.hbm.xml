@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-  <class catalog="system" name="beans.Master" optimistic-lock="version" table="masterTable">
+  <class catalog="mis" name="beans.Master" optimistic-lock="version" table="masterTable">
     <id name="masterKey" type="string">
       <column name="masterKey"/>
       <generator class="assigned"/>
