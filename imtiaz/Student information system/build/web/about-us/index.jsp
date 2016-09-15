@@ -1,12 +1,4 @@
-<%-- 
-    Document   : index
-    Created on : Jun 15, 2016, 12:41:04 AM
-    Author     : waxxan
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page errorPage="error.jsp"%>
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -52,11 +44,6 @@
     beans.Students personalInfo = (beans.Students)session.getAttribute("personalInfo");
     session.setAttribute("persoanlInfo", personalInfo);
 %>
-<%
-    response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");//HTTP 1.1
-    response.setHeader("Pragma","no-cache"); //HTTP 1.0
-    response.setDateHeader ("Expires", 0); //prevents caching at the proxy server
-%>
 <div id="wrapper" class="hfeed">
 	<div class="inner_wrap">
     <div id="header">
@@ -90,7 +77,7 @@
 			<!--.inner_head-->
             
             <div class="vav_wrap">
-            <div  class="menu-toggle-button" data-menu-id="demo-menu">MENU <i>---</i>≡</div>
+            <div  class="menu-toggle-button" data-menu-id="demo-menu">MENU <i>---</i>?</div>
             <div class="res_menu"><ul class="menu-list" id="demo-menu"><li id="item-id">Menu: </li>
 			
 			</div>            
@@ -98,7 +85,7 @@
                     <div id="access" role="navigation">
                         <div class="menu-header"><ul id="menu-main-menu-1" class="menu">
 						<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-22 current_page_item menu-item-has-children menu-item-36"><a href="index.jsp">Home Page </a>
-						<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-22 current_page_item menu-item-has-children menu-item-36"><a href="personel.jsp">Personel </a>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-22 current_page_item menu-item-has-children menu-item-36"><a href="personelInfo.jsp">Personel </a>
 						
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7840"><a href="personel.jsp">Personel Information</a></li>
@@ -243,17 +230,17 @@
 				
 
 			</div><!-- #content -->
-                        
-		<div id="primary" class="widget-area" role="complementary">
+                                        
+				<div id="primary" class="widget-area" role="complementary">
 
-                    <h3  class="widget-title side"></h3>
+  <h3 class="widget-title side"><%=personalInfo.getName()%></h3>
   <ul class="tb_side">
-      <li class="page_item page-item-51 page_item_has_children"><a><%=personalInfo.getRollNum()%></a>
+  	<li class="page_item page-item-51 page_item_has_children"><a><%=personalInfo.getRollNum()%></a>
 <ul class='children'>
 	
 </ul>
 </li>
-<li class="page_item page-item-53 page_item_has_children"><a><%=personalInfo.getName()%></a>
+<li class="page_item page-item-53 page_item_has_children"><a><%=personalInfo.getFatherName()%></a>
 <ul class='children'>
 	
 </ul>
@@ -265,26 +252,27 @@
 
 </ul>
 </li>
-<li class="page_item page-item-53 page_item_has_children"><a>Contact No: <%=personalInfo.getStContactNum()%> </a>
+<li class="page_item page-item-53 page_item_has_children"><a>Contact No:<%=personalInfo.getStContactNum()%> </a>
 <ul class='children'>
 	
 </ul>
 </li>
 
 
-<li class="page_item page-item-59 page_item_has_children"><a>F/contact:<%=personalInfo.getFtContactNum()%></a>
+<li class="page_item page-item-59 page_item_has_children"><a>F/contact: <%=personalInfo.getFtContactNum()%></a>
 <ul class='children'>
 
 </ul>
 </li>
-<li class="page_item page-item-7830"><a href="complaint.jsp">Complaints/Help</a></li>
+<li class="page_item page-item-7830"><a href="#">Complaints/Help</a></li>
   </ul>
 
     
 	
 			
 		</div><!-- #primary .widget-area -->
-		
+
+
 		</div><!-- #container -->
 
 

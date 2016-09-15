@@ -18,6 +18,10 @@
 
 
 <body class="page page-id-22 page-parent page-template-default">
+    <% 
+    beans.Students personalInfo = (beans.Students)session.getAttribute("personalInfo");
+    session.setAttribute("persoanlInfo", personalInfo);
+%> 
     	<!-- page -->
 		<script src="../wp-content/themes/duet/backstretch/jquery.backstretch.min.js"></script>
 		<script>
@@ -51,32 +55,25 @@
          
                 <div class="logo">
                 <a href="../index.jsp" title="MIS DUET">
-                         <img src="../wp-content/themes/duet/images/logo1.jpg" height=314  width=244>
+                         <img src="../wp-content/themes/duet/images/logo1.jpg" height=277  width=244>
                                 </a>
                 </div>
                 <div id="nav-trigger">
                         <div>- <span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></div>
                 </div>
                 <nav id="nav-mobile">
-                    	<div class="menu-top-menu-container"><ul id="menu-top-menu" class="menu">
-<li id="menu-item-7286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7286"><a href="startProject.jsp">Log Out</a></li>
-</ul></div>                </nav>
+                    	<div >
+						</div>                </nav>
                 <div class="top_menu">
                 	<div class="menu-header"><ul id="menu-top-menu-1" class="menu">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7286"><a href="startProject.jsp">Log Out</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7286"><a href="#">Log Out</a></li>
 </ul></div>                
       
                 <div class="search">
                 	                    	<div class="mw_button">
                         	
                         </div>
-                                        <form role="search" method="get" id="searchform" class="searchform" action="http://duet.edu.pk/">
-                        <div>
-                            <label class="screen-reader-text" for="s"></label>
-                            <input type="text" value="" placeholder="Search" name="s" id="s" />
-                            <input type="submit" id="searchsubmit" value="Search" />
-                        </div>
-                    </form>
+                             
                 </div>
                 </div>
             </div>
@@ -94,7 +91,7 @@
 						<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-22 current_page_item menu-item-has-children menu-item-36"><a href="personelInfo.jsp">Personel </a>
 						
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7840"><a href="personelInfo.jsp">Personel Information</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7840"><a href="personel.jsp">Personel Information</a></li>
 </ul>
 </li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-50"><a href="academics.jsp"> Academics </a>
@@ -167,13 +164,8 @@
 </li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7307"><a href="#"> Course Content </a></li>
 </ul></div>                    </div><!-- #access -->
-<% 
-    beans.Students personalInfo = (beans.Students)session.getAttribute("personalInfo");
-    session.setAttribute("persoanlInfo", personalInfo);
-%>                    
-<nav id="nav-mobile">
-                    	     
-                    </nav>
+                    <nav id="nav-mobile">
+                    	                    </nav>
                  </div>   
         	</div>
 	</div><!-- #header -->
@@ -201,7 +193,7 @@
 <tbody>
 <tr>
 <td>ID</td>
-<td><%=personalInfo.getRollNum()%></td>
+<td>_<%=personalInfo.getRollNum()%></td>
 </tr>
 <tr>
 <td>Name</td>
@@ -217,7 +209,7 @@
 </tr>
 <tr>
 <td>Caste</td>
-<td><%=personalInfo.getBatch()%></td>
+<td><%=personalInfo.getCaste()%></td>
 </tr>
 <tr>
 <td>Address</td>
@@ -239,6 +231,21 @@
 <td>Father Contact</td>
 <td><%=personalInfo.getFtContactNum()%></td>
 </tr>
+<tr>
+<td>Matriculations</td>
+<td>BISE Sukkur</td>
+</tr>
+<tr>
+<td>Intermediate</td>
+<td>BISE Sukkur</td>
+</tr>
+<tr>
+<td>Activities Sports/Else</td>
+<td>Cricket - Football - Table Tennis  </td>
+</tr>
+<td>Languages</td>
+<td>English - Sindhi - Siraiki - Urdu - Punjabi  </td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -250,7 +257,8 @@
 
 			</div><!-- #content -->
                         
-		<div id="primary" class="widget-area" role="complementary">
+		                
+				<div id="primary" class="widget-area" role="complementary">
 
   <h3 class="widget-title side"><%=personalInfo.getName()%></h3>
   <ul class="tb_side">
@@ -290,6 +298,7 @@
 	
 			
 		</div><!-- #primary .widget-area -->
+
 
 
 		</div><!-- #container -->
